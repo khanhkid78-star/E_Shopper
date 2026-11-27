@@ -9,10 +9,15 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/trang-chu', [HomeController::class, 'index']);
 
-// Backend
+Route::get('/dashboard', [AdminController::class, 'showDashboard']);
+// Trang đăng nhập
 Route::get('/admin', [AdminController::class, 'index']);
 
-Route::get('/dashboard', [AdminController::class, 'show_dashboard']);
+// Xử lý đăng nhập
+Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);
+
+// Đăng xuất
+Route::get('/logout', [AdminController::class, 'logout']);
 
 // Trang sản phẩm
 Route::get('/product', function () {

@@ -330,4 +330,10 @@
     }
 }
 
-
+span.text-alert {
+    color: red;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
